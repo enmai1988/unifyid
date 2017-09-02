@@ -14,5 +14,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, '../public')));
 
 app.use('/', routes.api);
+app.use('/api/credentials', routes.credentials); // in real-world this endpoint will be protected
+// other endpoints
 
 app.listen(port, () => console.log(`listening on port ${port}`));
