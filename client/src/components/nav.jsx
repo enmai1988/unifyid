@@ -1,16 +1,11 @@
 import React from 'react';
 import { Menu } from 'semantic-ui-react';
+import { navStyle } from '../style';
 
-class Nav extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+const Nav = ({ toggleSidebar }) => (
+  <Menu inverted fluid style={navStyle}>
+    <Menu.Item position='left'>UnifyID</Menu.Item>
+  </Menu>
+);
 
-  render() {
-    return (
-      <Menu>
-        <Menu.Item position='left'>UnifyID</Menu.Item>
-      </Menu>
-    )
-  }
-}
+export default Nav;
